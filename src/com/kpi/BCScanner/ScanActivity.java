@@ -147,10 +147,12 @@ public class ScanActivity extends Activity
                 for (Symbol sym : syms) {
                     scanText.setText(sym.getData());
                     GlobalVars.ScanResult=sym.getData().toString();
-                    Intent i = new Intent(getBaseContext(), Products.class);
-                    startActivity(i);
                     barcodeScanned = true;
+
                 }
+
+                Intent i = new Intent(getBaseContext(), Products.class);
+                startActivity(i);
             }
         }
     };
