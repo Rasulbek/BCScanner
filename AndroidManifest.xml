@@ -15,5 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".Products"
+                  android:label="Scan Result">
+            <intent-filter>
+                <action android:name="com.kpi.BCScanner.Products"/>
+                <category android:name="android.intent.category.default"/>
+            </intent-filter>
+                  </activity>
     </application>
 </manifest>

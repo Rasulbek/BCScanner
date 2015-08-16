@@ -6,8 +6,9 @@
  */
 package com.kpi.BCScanner;
 
+import android.content.Intent;
 import com.kpi.BCScanner.CameraPreview;
-
+import com.kpi.BCScanner.GlobalVars;
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -145,6 +146,9 @@ public class ScanActivity extends Activity
                 SymbolSet syms = scanner.getResults();
                 for (Symbol sym : syms) {
                     scanText.setText(sym.getData());
+                    GlobalVars.ScanResult=sym.getData().toString();
+                    Intent i = new Intent(getBaseContext(), Products.class);
+                    startActivity(i);
                     barcodeScanned = true;
                 }
             }
